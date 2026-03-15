@@ -32,4 +32,3 @@ if __name__ == "__main__":
     lat, lon, name, country = latitude_longitude(city)
     temp = temperature(lat, lon)
     print(f"Current temperature in {name}, {country} is {temp} °C")
-    

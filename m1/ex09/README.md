@@ -1,6 +1,6 @@
 # EX01
 
-# Name
+## Name
 Exercício introdutório que declara nome e sobrenome em variáveis e imprime o nome completo no terminal.
 
 ## O que é aprendido
@@ -10,7 +10,7 @@ Exercício introdutório que declara nome e sobrenome em variáveis e imprime o 
 
 # EX02
 
-# Boolean
+## Boolean
 Exercício que compara dois números e mostra resultados booleanos para igualdade, maior e menor.
 
 ## O que é aprendido
@@ -20,7 +20,7 @@ Exercício que compara dois números e mostra resultados booleanos para igualdad
 
 # EX03
 
-# Lists
+## Lists
 Exercício que cria uma lista de frutas e percorre cada item para exibição no terminal.
 
 ## O que é aprendido
@@ -30,7 +30,7 @@ Exercício que cria uma lista de frutas e percorre cada item para exibição no 
 
 # EX04
 
-# Dicts
+## Dicts
 Exercício que monta um dicionário de frutas e quantidades e imprime chave e valor em cada linha.
 
 ## O que é aprendido
@@ -40,7 +40,7 @@ Exercício que monta um dicionário de frutas e quantidades e imprime chave e va
 
 # EX05
 
-# Arguments
+## Arguments
 Exercício que lê argumentos de linha de comando, valida a entrada e imprime o argumento informado.
 
 ## O que é aprendido
@@ -50,7 +50,7 @@ Exercício que lê argumentos de linha de comando, valida a entrada e imprime o 
 
 # EX06
 
-# First Function
+## First Function
 Exercício que define uma função de saudação e a executa com um nome recebido pela linha de comando.
 
 ## O que é aprendido
@@ -60,7 +60,7 @@ Exercício que define uma função de saudação e a executa com um nome recebid
 
 # EX07
 
-# Greetings from the Farm
+## Greetings from the Farm
 Exercício que usa a biblioteca `cowsay` para exibir uma saudação em formato ASCII a partir de um argumento.
 
 ## O que é aprendido
@@ -70,7 +70,7 @@ Exercício que usa a biblioteca `cowsay` para exibir uma saudação em formato A
 
 # EX08
 
-# Weather
+## Weather
 Exercício que consulta APIs públicas para obter latitude/longitude de uma cidade e exibir a temperatura atual.
 
 ## O que é aprendido
@@ -80,7 +80,7 @@ Exercício que consulta APIs públicas para obter latitude/longitude de uma cida
 
 # EX09
 
-# README do Exercício 09
+## README do Exercício 09
 Exercício focado em documentação do módulo, organizando objetivo e aprendizados de forma clara em Markdown.
 
 ## O que é aprendido
