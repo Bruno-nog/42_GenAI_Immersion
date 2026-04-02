@@ -4,23 +4,10 @@ from groq import Groq
 from dotenv import load_dotenv
 load_dotenv()
 
-def call_model(client):
+def call_model(client, messages):
     response = client.chat.completions.create(
-        messages = [
-            {
-                "role": "system",
-                "content": "algo"
-            },
-            {
-                "role": "user",
-                "content": "algo 2"
-            },
-            {
-                "role": "assistant",
-                "content": "algo 3"
-            }
-        ],
         model="llama-3.3-70b-versatile",
+        messages=messages
     )
     return response.choices[0].message.content
 
@@ -31,7 +18,15 @@ def chatbot():
     ]
     while True:
         user_input = input("Q: ")
-    call_model(client)
+        if user_input == "bye":
+            break
+        history.append({"role": "user", "content": user_input})
+        MAX_MESSAGES = 11
+        messages = history[-MAX_MESSAGES:]
+        answer = call_model(client, messages)
+
+        print("A:", answer)
+        history.append({"role": "assistant", "content": answer})
 
 if __name__ == "__main__":
     if len(sys.argv) != 1:
