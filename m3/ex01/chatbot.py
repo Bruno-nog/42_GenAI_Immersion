@@ -19,10 +19,12 @@ def chatbot():
     while True:
         user_input = input("Q: ")
         if user_input == "bye":
+            print("bye bye")
             break
         history.append({"role": "user", "content": user_input})
         MAX_MESSAGES = 11
-        messages = history[-MAX_MESSAGES:]
+        history.reverse()
+        messages = history[:MAX_MESSAGES]
         answer = call_model(client, messages)
 
         print("A:", answer)
