@@ -1,14 +1,24 @@
+import os
+import sys
+from groq import Groq
+from dotenv import load_dotenv
+from sentence_transformers import SentenceTransformer
+load_dotenv()
+
+def call_model():
+    response = client.chat.completions.create(
+        model="paraphrase-multilingual-MiniLM-L12-v2"
+        messages=messages
+    )
+    return response.choices[0].message.content
 
 
-lista = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "j"]
-print(f"\nlista1: {lista[:: - 3]}\n")
+def embeddings(semantic_word):
 
-print(f"lista2: {lista[1:4]}\n")
 
-print(f"lista3: {lista[::3]}\n")
-
-print(f"lista4: {lista[3:]}\n")
-
-print(f"lista5: {lista[3::]}\n")
-
-print(f"lista6: {lista[-3:]}\n")
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print("Usage: python3 embeddins.py <semantic>")
+        sys.exit(1)
+    semantic_word = sys.argv[1]
+    embeddings(semantic_word)
