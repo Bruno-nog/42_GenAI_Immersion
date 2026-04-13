@@ -36,14 +36,19 @@ def embeddings(query):
     query_embedding = model.encode(query)
     print(query_embedding)
     embeddings_phrases = model.encode(phrases)
+    results = []
     i = 0
     while i < len(phrases):
         phrase = phrases[i]
         embedding = embeddings_phrases[i]
         score = cosine_similarity([query_embedding], [embedding])[0][0]
         print(phrase, score)
+        results.append((phrase, score))
         i += 1
-    
+    results = sorted(results, key=lambda x: x[1], reverse=True)
+    top3 = results[:3]
+    for phrase, score in top3:
+        print(f"{phrase} (score: {score:.4f})")
  
 if __name__ == "__main__":
     if len(sys.argv) != 2:
